@@ -7,11 +7,11 @@ import (
 	"net/http"
 )
 
-// type jsonResponse struct {
-// 	Error   bool   `json:"error"`
-// 	Message string `json:"message"`
-// 	Data    any    `json:"data,omitempty"`
-// }
+type jsonResponse struct {
+	Error   bool   `json:"error"`
+	Message string `json:"message"`
+	Data    any    `json:"data,omitempty"`
+}
 
 func (app *Config) readJSON(w http.ResponseWriter, r *http.Request, data any) error {
 	maxBytes := 1048576 //one megabyte
